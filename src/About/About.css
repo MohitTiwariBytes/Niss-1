@@ -1,0 +1,195 @@
+/* About.css */
+
+/* .about-page {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; 
+    color: #333; 
+}
+
+
+
+.page-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+
+.company-mission, .company-history, .team-introduction, .client-testimonials, .company-culture, .call-to-action {
+    margin-bottom: 40px;
+}
+
+.company-mission h2, .company-history h2, .team-introduction h2, .client-testimonials h2, .company-culture h2, .call-to-action h2 {
+    font-size: 2rem;
+    color: #000;
+}
+
+.company-mission p, .company-history p, .team-introduction p, .client-testimonials p, .company-culture p, .call-to-action p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.company-history ul, .company-culture ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.company-history li, .company-culture li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.team-introduction .team-member {
+    margin-bottom: 20px;
+}
+
+.team-introduction h3 {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.team-introduction p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+
+.client-testimonials .testimonial {
+    border-left: 3px solid #007bff; 
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.client-testimonials p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+
+.call-to-action h2 {
+    font-size: 2rem;
+    color: #000;
+}
+
+.call-to-action p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.call-to-action .btn {
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.call-to-action .btn:hover {
+    background-color: #0056b3; 
+} */
+
+/* About.css */
+.App {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding-top: 60px; 
+   
+  }
+  
+  /* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  } */
+  
+  h2 {
+    color: #333;
+    font-size: 2rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .company-mission, .company-history, .team-introduction, .client-testimonials, .company-culture, .call-to-action {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member {
+    margin-bottom: 20px;
+  }
+  
+  .client-testimonials .testimonial {
+    background-color: #f1f1f1;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+  }
+  
+  .call-to-action {
+    text-align: center;
+  }
+  
+  .call-to-action .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .call-to-action .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    h3 {
+      font-size: 1.25rem;
+    }
+  
+    .call-to-action .btn {
+      font-size: 0.875rem;
+      padding: 8px 16px;
+    }
+  }
+  

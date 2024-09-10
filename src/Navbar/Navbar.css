@@ -1,0 +1,158 @@
+/* Navbar.css */
+.header {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 60px; /* Adjust height as needed */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the navbar */
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.nav__link:hover,
+.nav__link.active {
+  background-color: green;
+  border-radius: 4px;
+}
+
+.nav__logo {
+  display: flex;
+  /* align-items: center; */
+  color: #fff; /* Adjust text color */
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav__logo-img {
+  width: 60px; /* Adjust the size as needed */
+  height: auto;
+  background-color: white;
+  margin-right: 10px; /* Adjust spacing between logo and text */
+}
+
+.nav__cta {
+  background-color: #007bff;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.nav__cta:hover {
+  background-color: #0056b3;
+}
+
+.nav__toggle,
+.nav__close {
+  display: none;
+}
+
+.nav__menu {
+  display: flex;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu .dropdown-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 1150px) {
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust to the height of the navbar */
+    left: 0;
+    background: #333;
+    z-index: 10;
+  }
+
+  .nav__menu.show-menu {
+    display: flex;
+  }
+
+  .nav__toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__close {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .nav__item {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+  }
+}
