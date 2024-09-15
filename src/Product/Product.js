@@ -50,7 +50,7 @@ const Product = () => {
             <li>Whatsapp Button Integration</li>
           </ul>
           <div className="package-cost">
-            <p>Overall Cost: ₹15,000</p>
+            <p>Overall Cost: ₹25,000</p>
           </div>
           <a href="/get-started" className="btn">Get Started</a>
         </div>
