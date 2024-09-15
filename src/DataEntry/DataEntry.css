@@ -255,3 +255,12 @@
     margin-top: 20px;
     margin-bottom: 15em;
 }
+/* DataEntry.css */
+
+.alert {
+    padding: 15px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+}

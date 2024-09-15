@@ -86,6 +86,7 @@ import React from 'react';
 import NavBar from '../Navbar/Navbar';
 import './About.css';
 import Footer from "../Footer/Footer";
+import Manish from "../Manish.jpeg"
 
 const About = () => {
     return (
@@ -106,9 +107,9 @@ const About = () => {
                     <h2>Our Journey</h2>
                     <p>Founded in September 2024 by Manish Kumar Singh, NISS Pvt Ltd started with a vision to bridge the gap between businesses and their online presence. Since then, we have grown into a trusted partner for companies seeking innovative web solutions.</p>
                     <ul>
-                        <li><strong>2024:</strong> Company established and first projects launched.</li>
-                        <li><strong>2025:</strong> Expanded services to include dynamic web applications.</li>
-                        <li><strong>2026:</strong> Achieved milestone of 100 completed projects.</li>
+                        <li><strong>2022:</strong> Company established and first projects launched.</li>
+                        <li><strong>2023:</strong> Expanded services to include dynamic web applications.</li>
+                        <li><strong>2024:</strong> Achieved milestone of 100 completed projects.</li>
                     </ul>
                 </div>
 
@@ -117,6 +118,7 @@ const About = () => {
                     <h2>Meet Our Team</h2>
                     <div className="team-member">
                         <h3>Manish Kumar Singh - Founder & CEO</h3>
+                        <img src={Manish}  className="img1" />
                         <p>With over a decade of experience in web development, Manish leads the team with a focus on innovation and client satisfaction. His leadership ensures that NISS Pvt Ltd remains at the forefront of web technology.</p>
                     </div>
                     <div className="team-member">

@@ -287,7 +287,7 @@ const Navbar = () => {
                 </li>
                 <li className="dropdown-item">
                   <NavLink
-                    to="/dashboard"
+                    to="/login"
                     className="nav__link"
                     onClick={closeMenuOnMobile}
                   >

@@ -7,6 +7,7 @@ import ContactUs from './ContactUs/ContactUs';
 import Dashboard from './Dashboard/Dashboard';
 import NavBar from './Navbar/Navbar';
 import Footer from "./Footer/Footer";
+import Login from './Login/Login';
 //import NavbarHook from './NavbarHook/NavbarHook';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/navBar" element={<NavBar />} />
             <Route path='/footer' element={<Footer />} />
+            <Route path='/login' element={<Login />} />
           </Routes>
         </div>
       </div>

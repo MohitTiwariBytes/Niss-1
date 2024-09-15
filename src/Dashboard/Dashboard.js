@@ -1,10 +1,216 @@
+// import React, { useState, useEffect } from 'react';
+// import * as XLSX from 'xlsx';
+// import NavBar from '../Navbar/Navbar';
+// import './Dashboard.css'; // Import custom CSS
+// import Footer from "../Footer/Footer";
+
+// const Dashboard = () => {
+//     const [dataEntryData, setDataEntryData] = useState([]);
+//     const [contactData, setContactData] = useState([]);
+
+//     useEffect(() => {
+//         try {
+//             const storedDataEntryData = JSON.parse(localStorage.getItem('dataEntryData')) || [];
+//             const storedContactData = JSON.parse(localStorage.getItem('contactData')) || [];
+
+//             setDataEntryData(storedDataEntryData);
+//             setContactData(storedContactData);
+//         } catch (error) {
+//             console.error('Error fetching data from local storage:', error);
+//         }
+//     }, []);
+
+//     const downloadExcel = (data, fileName) => {
+//         const wb = XLSX.utils.book_new();
+//         const ws = XLSX.utils.json_to_sheet(data);
+//         XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+//         XLSX.writeFile(wb, fileName);
+//     };
+
+//     return (
+//         <div className="dashboard-page">
+//             <NavBar />
+//             <div className="container mt-5">
+//                 <h1 className="text-center mb-4" style={{ marginTop: "2em" }}>Dashboard</h1>
+
+//                 <div className="dashboard-section">
+//                     <h2>Contact Us Records</h2>
+                    
+//                     <table className="dashboard-table">
+//                         <thead>
+//                             <tr>
+//                                 <th>Name</th>
+//                                 <th>Email</th>
+//                                 <th>Subject</th>
+//                                 <th>Message</th>
+//                             </tr>
+//                         </thead>
+//                         <tbody>
+//                             {contactData.length > 0 ? (
+//                                 contactData.map((item, index) => (
+//                                     <tr key={index}>
+//                                         <td data-label="Name">{item.name}</td>
+//                                         <td data-label="Email">{item.email}</td>
+//                                         <td data-label="Subject">{item.subject}</td>
+//                                         <td data-label="Message">{item.message}</td>
+//                                     </tr>
+//                                 ))
+//                             ) : (
+//                                 <tr>
+//                                     <td colSpan="4">No data available</td>
+//                                 </tr>
+//                             )}
+//                         </tbody>
+//                     </table>
+//                 </div>
+
+//                 <div className="text-center mt-4">
+//                     <button 
+//                         className="btn-primary"
+//                         onClick={() => downloadExcel(contactData, 'contact_us_records.xlsx')}
+//                     >
+//                         Download Contact Us Data as Excel
+//                     </button>
+//                 </div>
+//             </div>
+
+//             <Footer />
+//         </div>
+//     );
+// };
+
+// export default Dashboard;
+
+// import React, { useState, useEffect } from 'react';
+// import * as XLSX from 'xlsx';
+// import NavBar from '../Navbar/Navbar';
+// import './Dashboard.css'; // Import custom CSS
+// import Footer from "../Footer/Footer";
+
+// const Dashboard = () => {
+//     const [dataEntryData, setDataEntryData] = useState([]);
+//     const [contactData, setContactData] = useState([]);
+
+//     useEffect(() => {
+//         // Fetch data from local storage
+//         const storedDataEntryData = JSON.parse(localStorage.getItem('dataEntryData')) || [];
+//         const storedContactData = JSON.parse(localStorage.getItem('contactData')) || [];
+
+//         setDataEntryData(storedDataEntryData);
+//         setContactData(storedContactData);
+//     }, []);
+
+//     const downloadExcel = (data, fileName) => {
+//         // Create a new workbook and add the data as a worksheet
+//         const wb = XLSX.utils.book_new();
+//         const ws = XLSX.utils.json_to_sheet(data);
+//         XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+        
+//         // Write the workbook to a file
+//         XLSX.writeFile(wb, fileName);
+//     };
+
+//     return (
+//         <div className="dashboard-page">
+//             <NavBar />
+//             <div className="container mt-5">
+//                 <h1 className="text-center mb-4" style={{marginTop:"2em"}}>Dashboard</h1>
+
+//                 <div className="dashboard-section">
+//                     <h2>Contact Us Records</h2>
+                    
+//                     <table className="dashboard-table">
+//                         <thead>
+//                             <tr>
+//                                 <th>Name</th>
+//                                 <th>Email</th>
+//                                 <th>Subject</th>
+//                                 <th>Message</th>
+//                             </tr>
+//                         </thead>
+//                         <tbody>
+//                             {contactData.length > 1 ? (
+//                                 contactData.map((item, index) => (
+//                                     <tr key={index}>
+//                                         <td>{item.name}</td>
+//                                         <td>{item.email}</td>
+//                                         <td>{item.subject}</td>
+//                                         <td>{item.message}</td>
+//                                     </tr>
+//                                 ))
+//                             ) : (
+//                                 <tr>
+//                                     <td colSpan="4">No data available</td>
+//                                 </tr>
+//                             )}
+//                         </tbody>
+//                     </table>
+//                 </div>
+
+//                 <div className="dashboard-section">
+//                     <h2>Data Entry Records</h2>
+                    
+//                     <table className="dashboard-table">
+//                         <thead>
+//                             <tr>
+//                                 <th>Organization Name</th>
+//                                 <th>Project Type</th>
+//                                 <th>Time Intervals</th>
+//                                 <th>Client Name</th>
+//                                 <th>Project Description</th>
+//                                 <th>Start Date</th>
+//                                 <th>End Date</th>
+//                                 <th>Status</th>
+//                                 <th>Assigned To</th>
+//                                 <th>Budget</th>
+//                             </tr>
+//                         </thead>
+//                         <tbody>
+//                             {dataEntryData.length > 0 ? (
+//                                 dataEntryData.map((item, index) => (
+//                                     <tr key={index}>
+//                                         <td>{item.organizationName}</td>
+//                                         <td>{item.projectType}</td>
+//                                         <td>{item.timeIntervals}</td>
+//                                         <td>{item.clientName}</td>
+//                                         <td>{item.projectDescription}</td>
+//                                         <td>{item.startDate}</td>
+//                                         <td>{item.endDate}</td>
+//                                         <td>{item.status}</td>
+//                                         <td>{item.assignedTo}</td>
+//                                         <td>{item.budget}</td>
+//                                     </tr>
+//                                 ))
+//                             ) : (
+//                                 <tr>
+//                                     <td colSpan="10">No data available</td>
+//                                 </tr>
+//                             )}
+//                         </tbody>
+//                     </table>
+
+//                     <button 
+//                         className="btn btn-primary mb-3"
+//                         onClick={() => downloadExcel(dataEntryData, 'data_entry_records.xlsx')}
+//                     >
+//                         Download Data Entry Records as Excel
+//                     </button>
+//                 </div>
+//             </div>
+//             <Footer />
+//         </div>
+//     );
+// };
+
+// export default Dashboard;
+
+
+// src/components/Dashboard/Dashboard.jsx
 import React, { useState, useEffect } from 'react';
 import * as XLSX from 'xlsx';
 import NavBar from '../Navbar/Navbar';
 import './Dashboard.css'; // Import custom CSS
-// import XLSX from 'xlsx'; // Import the XLSX library
 import Footer from "../Footer/Footer";
-
 
 const Dashboard = () => {
     const [dataEntryData, setDataEntryData] = useState([]);
@@ -33,7 +239,7 @@ const Dashboard = () => {
         <div className="dashboard-page">
             <NavBar />
             <div className="container mt-5">
-                <h1 className="text-center mb-4" style={{marginTop:"2em"}}>Dashboard</h1>
+                <h1 className="text-center mb-4" style={{ marginTop: "2em" }}>Dashboard</h1>
 
                 <div className="dashboard-section">
                     <h2>Contact Us Records</h2>
@@ -64,19 +270,60 @@ const Dashboard = () => {
                             )}
                         </tbody>
                     </table>
-                  
                 </div>
-               
-            </div>
 
-            <button 
-                        className="btn btn-primary mb-3" style={{marginLeft:"35em",marginTop:"2em"}}
-                        onClick={() => downloadExcel(contactData, 'contact_us_records.xlsx')}
+                <div className="dashboard-section">
+                    <h2>Data Entry Records</h2>
+                    
+                    <table className="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Organization Name</th>
+                                <th>Project Type</th>
+                                <th>Time Intervals</th>
+                                <th>Client Name</th>
+                                <th>Project Description</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Status</th>
+                                <th>Assigned To</th>
+                                <th>Budget</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {dataEntryData.length > 0 ? (
+                                dataEntryData.map((item, index) => (
+                                    <tr key={index}>
+                                        <td>{item.organizationName}</td>
+                                        <td>{item.projectType}</td>
+                                        <td>{item.timeIntervals}</td>
+                                        <td>{item.clientName}</td>
+                                        <td>{item.projectDescription}</td>
+                                        <td>{item.startDate}</td>
+                                        <td>{item.endDate}</td>
+                                        <td>{item.status}</td>
+                                        <td>{item.assignedTo}</td>
+                                        <td>{item.budget}</td>
+                                    </tr>
+                                ))
+                            ) : (
+                                <tr>
+                                    <td colSpan="10">No data available</td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </table>
+
+                    <button 
+                        className="btn btn-primary mb-3"
+                        onClick={() => downloadExcel(dataEntryData, 'data_entry_records.xlsx')}
                     >
-                        Download Contact Us Data as Excel
-                    </button> <Footer></Footer>
+                        Download Data Entry Records as Excel
+                    </button>
+                </div>
+            </div>
+            <Footer />
         </div>
-       
     );
 };
 
