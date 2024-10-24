@@ -205,7 +205,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
 import "./Navbar.css";
-import logo1 from "../logo1.png"
+import logo1 from "../nissDevLogo.png"
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -240,7 +240,7 @@ const Navbar = () => {
       <nav className="nav container">
         <NavLink to="/" className="nav__logo">
         <img src={logo1}  className="nav__logo-img" />
-          New India Software Solutions Pvt Ltd
+          <h1>New India Software Solutions Pvt Ltd</h1>
         </NavLink>
 
         <div
@@ -306,12 +306,12 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="nav__close" id="nav-close" onClick={toggleMenu}>
-            <IoClose />
+            <IoClose className="nav__close__icon"/>
           </div>
         </div>
 
         <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
-          <IoMenu />
+          <IoMenu className="nav__toggle__icon" />
         </div>
       </nav>
     </header>
