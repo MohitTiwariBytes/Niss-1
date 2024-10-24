@@ -149,7 +149,11 @@
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
+  .company-mission{
+    margin-top: calc(600px);
+  }
+
   .team-member {
     margin-bottom: 20px;
   }

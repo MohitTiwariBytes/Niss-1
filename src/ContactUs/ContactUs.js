@@ -213,6 +213,18 @@ const ContactUs = () => {
                             />
                         </div>
                         <div className="form-group">
+                            <label htmlFor="email">Phone Number</label>
+                            <input
+                                type="email"
+                                id="phonenumber"
+                                name="phoneNumber"
+                                value={formData.phoneNumber}
+                                onChange={handleChange}
+                                placeholder="Contact Number"
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="subject">Subject</label>
                             <input
                                 type="text"
@@ -236,7 +248,7 @@ const ContactUs = () => {
                                 required
                             ></textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary">Send Message</button>
+                        <button style={{position: "relative"}} type="submit" className="btn btn-primary">Send Message</button>
                     </form>
                     {confirmationMessage && (
                         <div className="confirmation-message">

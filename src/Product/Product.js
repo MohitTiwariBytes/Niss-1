@@ -31,6 +31,21 @@ const Product = () => {
             <p>Don’t Stress Over Your Website Maintenance – Let Us Handle It While You Focus on Your Business!</p>
             <a href="/get-started" className="btn">Get Started</a>
           </div>
+          <div className="product-card">
+            <h3>App Development</h3>
+            <p>Enjoy Professional Applications at Affordable Prices with Us.</p>
+            <a href="/get-started" className="btn">Get Started</a>
+          </div>
+          <div className="product-card">
+            <h3>App Design</h3>
+            <p>Get a beautiful App Design at Affordable Prices with Us.</p>
+            <a href="/get-started" className="btn">Get Started</a>
+          </div>
+          <div className="product-card">
+            <h3>App Maintenance</h3>
+            <p>GDon’t Stress Over Your Application's Maintenance – Let Us Handle It While You Focus on Your Business!</p>
+            <a href="/get-started" className="btn">Get Started</a>
+          </div>
         </div>
       </section>
       <section className="package-details">
@@ -50,7 +65,7 @@ const Product = () => {
             <li>Whatsapp Button Integration</li>
           </ul>
           <div className="package-cost">
-            <p>Overall Cost: ₹25,000</p>
+            <p>Starting from: ₹7999</p>
           </div>
           <a href="/get-started" className="btn">Get Started</a>
         </div>

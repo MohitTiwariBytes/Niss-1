@@ -87,12 +87,14 @@ import NavBar from '../Navbar/Navbar';
 import './About.css';
 import Footer from "../Footer/Footer";
 import Manish from "../Manish.jpeg"
+import Carousel from '../Carousel/Carousel1';
 
 const About = () => {
     return (
         <div className='App'>
             <div className="container mt-5">
                 <NavBar />
+                <Carousel></Carousel>
 
                 {/* Company Mission and Vision */}
                 <div className="company-mission">
