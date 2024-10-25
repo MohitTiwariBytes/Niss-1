@@ -1,6 +1,6 @@
 // Carousel.js
 import React, { useEffect, useState } from 'react';
-import './Carousel.css'; // Create this file for styling
+import './Carousel.css';
 
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,8 +27,10 @@ const Carousel = () => {
 
     return (
         <div className="carousel">
-            <div className="carousel-images">
-                <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} />
+            <div className="carousel-images" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                {images.map((image, index) => (
+                    <img key={index} src={image} alt={`Slide ${index}`} />
+                ))}
             </div>
             <button className="prev" onClick={prevSlide}>❮</button>
             <button className="next" onClick={nextSlide}>❯</button>
